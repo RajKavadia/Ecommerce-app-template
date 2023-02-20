@@ -1,0 +1,1 @@
+class Catalogtwo1ItemModel { }

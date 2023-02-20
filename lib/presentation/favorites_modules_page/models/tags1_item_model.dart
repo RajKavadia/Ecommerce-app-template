@@ -1,0 +1,1 @@
+class Tags1ItemModel { }
