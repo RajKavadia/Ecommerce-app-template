@@ -4,7 +4,6 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomImageView extends StatelessWidget {
   ///[url] is required parameter for fetching network image
@@ -53,9 +52,9 @@ class CustomImageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return alignment != null
         ? Align(
-      alignment: alignment!,
-      child: _buildWidget(),
-    )
+            alignment: alignment!,
+            child: _buildWidget(),
+          )
         : _buildWidget();
   }
 
@@ -71,20 +70,19 @@ class CustomImageView extends StatelessWidget {
 
   ///build the image with border radius
   _buildCircleImage() {
-    if(radius!=null) {
+    if (radius != null) {
       return ClipRRect(
         borderRadius: radius,
         child: _buildImageWithBorder(),
       );
-    }
-    else{
+    } else {
       return _buildImageWithBorder();
     }
   }
 
   ///build the image with border and border radius style
-  _buildImageWithBorder(){
-    if(border!=null) {
+  _buildImageWithBorder() {
+    if (border != null) {
       return Container(
         decoration: BoxDecoration(
           border: border,
@@ -92,7 +90,7 @@ class CustomImageView extends StatelessWidget {
         ),
         child: _buildImageView(),
       );
-    }else{
+    } else {
       return _buildImageView();
     }
   }
@@ -102,13 +100,6 @@ class CustomImageView extends StatelessWidget {
       return Container(
         height: height,
         width: width,
-        child: SvgPicture.asset(
-          svgPath!,
-          height: height,
-          width: width,
-          fit: fit ?? BoxFit.contain,
-          color: color,
-        ),
       );
     } else if (file != null && file!.path.isNotEmpty) {
       return Image.file(

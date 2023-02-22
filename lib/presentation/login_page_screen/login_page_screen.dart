@@ -118,12 +118,19 @@ class LoginPageScreen extends GetWidget<LoginPageController> {
                                         Padding(
                                             padding:
                                                 getPadding(top: 5, bottom: 4),
-                                            child: Text(
-                                                "msg_forgot_your_password".tr,
-                                                overflow: TextOverflow.ellipsis,
-                                                textAlign: TextAlign.left,
-                                                style: AppStyle
-                                                    .txtMetropolisMedium14Gray900)),
+                                            child: InkWell(
+                                              onTap: () {
+                                                Get.toNamed(AppRoutes
+                                                    .forgotPasswordScreen);
+                                              },
+                                              child: Text(
+                                                  "msg_forgot_your_password".tr,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  textAlign: TextAlign.left,
+                                                  style: AppStyle
+                                                      .txtMetropolisMedium14Gray900),
+                                            )),
                                         CustomImageView(
                                             svgPath:
                                                 ImageConstant.imgArrowright,

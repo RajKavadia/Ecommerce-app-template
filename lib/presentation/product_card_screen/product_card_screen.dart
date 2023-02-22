@@ -260,10 +260,10 @@ class ProductCardScreen extends GetWidget<ProductCardController> {
                                             alignment: Alignment.bottomCenter,
                                             child: Container(
                                                 padding: getPadding(
-                                                    left: 16,
-                                                    top: 20,
-                                                    right: 16,
-                                                    bottom: 20),
+                                                    left: 10,
+                                                    top: 10,
+                                                    right: 10,
+                                                    bottom: 10),
                                                 decoration: AppDecoration
                                                     .outlineBlack90019,
                                                 child: Column(

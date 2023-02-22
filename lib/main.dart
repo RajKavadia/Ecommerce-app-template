@@ -21,14 +21,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          visualDensity: VisualDensity.standard,
+        visualDensity: VisualDensity.standard,
       ),
       translations: AppLocalization(),
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: Locale('en', 'US'),
       title: 'raj_s_application5',
       initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.initialRoute,
+      initialRoute: AppRoutes.signUpPageScreen,
       getPages: AppRoutes.pages,
     );
   }

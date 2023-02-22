@@ -1,9 +1,10 @@
-import 'controller/my_profile_settings_password_change_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:raj_s_application5/core/app_export.dart';
 import 'package:raj_s_application5/core/utils/validation_functions.dart';
 import 'package:raj_s_application5/widgets/custom_button.dart';
 import 'package:raj_s_application5/widgets/custom_text_form_field.dart';
+
+import 'controller/my_profile_settings_password_change_controller.dart';
 
 // ignore_for_file: must_be_immutable
 class MyProfileSettingsPasswordChangeBottomsheet extends StatelessWidget {
@@ -77,15 +78,17 @@ class MyProfileSettingsPasswordChangeBottomsheet extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerRight,
-                child: Padding(
-                  padding: getPadding(
-                    top: 17,
-                  ),
-                  child: Text(
-                    "msg_forgot_password".tr,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.left,
-                    style: AppStyle.txtMetropolisMedium14Gray500,
+                child: InkWell(
+                  child: Padding(
+                    padding: getPadding(
+                      top: 17,
+                    ),
+                    child: Text(
+                      "msg_forgot_password".tr,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.left,
+                      style: AppStyle.txtMetropolisMedium14Gray500,
+                    ),
                   ),
                 ),
               ),
